@@ -1,0 +1,19 @@
+<div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+    <div class="container">
+        <div class="text-center">
+            <h6 class="section-title bg-white text-center text-primary px-3">Testimonial</h6>
+            <h1 class="mb-5">Our Clients Say!!!</h1>
+        </div>
+        <div>
+            <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig">
+                @for (slide of slides; track slide.img) {
+                <div ngxSlickItem class="slide">
+                    <img src="{{slide.img}}" alt="" srcset="">
+
+                </div>
+                }
+
+            </ngx-slick-carousel>
+        </div>
+    </div>
+</div>
