@@ -9,11 +9,12 @@ import { BookingComponent } from "../booking/booking.component";
 import { ProcessComponent } from "../process/process.component";
 import { TestimonialComponent } from "../testimonial/testimonial.component";
 import { FooterComponent } from "../footer/footer.component";
+import { HeroComponent } from "../hero/hero.component";
 
 @Component({
   selector: 'app-main',
   standalone: true,
-  imports: [HeaderComponent, TopbarComponent, AboutComponent, ServiceComponent, DestinationComponent, PackageComponent, BookingComponent, ProcessComponent, TestimonialComponent, FooterComponent],
+  imports: [HeaderComponent, TopbarComponent, AboutComponent, ServiceComponent, DestinationComponent, PackageComponent, BookingComponent, ProcessComponent, TestimonialComponent, FooterComponent, HeroComponent],
   templateUrl: './main.component.html',
   styleUrl: './main.component.scss'
 })
