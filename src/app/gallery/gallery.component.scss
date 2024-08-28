@@ -1,0 +1,50 @@
+.gallery-item {
+  margin-bottom: 30px;
+}
+
+.thumbnail {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.thumbnail:hover {
+  transform: scale(1.05);
+}
+
+.popup {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  z-index: 10;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.popup-image {
+  width: 100%;
+  height: auto;
+}
+
+.position-relative:hover .popup {
+  display: block;
+}
+
+.gallery-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 15px;
+  color: #333;
+}
+
+.text-center {
+  text-align: center;
+}

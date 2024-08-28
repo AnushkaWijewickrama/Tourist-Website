@@ -1,0 +1,27 @@
+<app-topbar></app-topbar>
+<app-header [selectedOptions]="'gallery'"></app-header>
+<app-navbar [title]="'Gallery'"></app-navbar>
+<div class="gallery">
+    @for (gallery of galleryList; track gallery._id) {
+    <h4 class="gallery-title text-center">{{ gallery.title }}</h4>
+
+    <div class="gallery-item">
+        <div class="container">
+            <div class="row">
+                @for (item of gallery.imagePath; track item._id) {
+                <div class="col-lg-4 position-relative mb-4">
+                    <img [src]="item" class="thumbnail">
+                    <div class="popup">
+                        <img [src]="item" class="popup-image">
+                    </div>
+                </div>
+                } @empty {
+                <li>There are no items.</li>
+                }
+            </div>
+        </div>
+    </div>
+    } @empty {
+    <li>There are no galleries.</li>
+    }
+</div>

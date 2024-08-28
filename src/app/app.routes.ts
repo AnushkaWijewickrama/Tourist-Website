@@ -4,6 +4,7 @@ import { AboutusComponent } from './pages/aboutus/aboutus.component';
 import { ServiceComponentP } from './pages/service/service.component';
 import { PackegepComponent } from './pages/packegep/packegep.component';
 import { ContactUsComponent } from './pages/contact-us/contact-us.component';
+import { GalleryComponent } from './gallery/gallery.component';
 
 export const routes: Routes = [
     {
@@ -37,6 +38,13 @@ export const routes: Routes = [
     {
         path: 'contact',
         component: ContactUsComponent,
+        data: {
+            title: "Tourist"
+        }
+    },
+    {
+        path: 'gallery',
+        component: GalleryComponent,
         data: {
             title: "Tourist"
         }
