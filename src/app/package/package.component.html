@@ -21,7 +21,7 @@
                     </div> -->
                     <h3 class="text-center mt-4">{{package?.title}}</h3>
                     <div class="text-center p-4">
-                        <h3 class="mb-0">LKR:{{package?.price}}</h3>
+                        <h3 class="mb-0">{{package?.price | currency:'LKR':'symbol'}}</h3>
                         <div class="mb-3">
                             <small class="fa fa-star text-primary"></small>
                             <small class="fa fa-star text-primary"></small>

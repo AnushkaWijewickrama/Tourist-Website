@@ -1,0 +1,32 @@
+<app-topbar></app-topbar>
+<app-header></app-header>
+<app-navbar [title]="'Products Details'"></app-navbar>
+<section id="product" class="product-section">
+    <div class="container">
+        <p-carousel [responsiveOptions]="responsiveOptions" [value]="productSingleList?.imagePath" [numVisible]="1"
+            [numScroll]="1" orientation="vertical" verticalViewPortHeight="360px">
+            <ng-template let-productSingle pTemplate="item">
+                <div class="border-1 surface-border border-round m-2 p-3">
+                    <div class="mb-3">
+                        <div class="relative mx-auto">
+                            <img [src]="productSingle" [alt]="productSingle" width="100%" height="auto" />
+                        </div>
+                    </div>
+                    <div class="mb-3 font-medium">
+                        {{ productSingleList.title }}
+                    </div>
+                </div>
+            </ng-template>
+        </p-carousel>
+
+
+        <div class="product-details">
+            <h1>{{productSingleList?.title}}</h1>
+            <p class="price">$1200 per person</p>
+            <p class="description">{{productSingleList?.description}}</p>
+            <p [innerHTML]="productSingleList?.longDescription"></p>
+            <!-- <a href="#" class="btn">Book Now</a> -->
+        </div>
+    </div>
+</section>
+<app-footer></app-footer>

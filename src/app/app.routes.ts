@@ -5,6 +5,8 @@ import { ServiceComponentP } from './pages/service/service.component';
 import { PackegepComponent } from './pages/packegep/packegep.component';
 import { ContactUsComponent } from './pages/contact-us/contact-us.component';
 import { GalleryComponent } from './gallery/gallery.component';
+import { ProductSingleComponent } from './products-single/products-single.component';
+import { ProductsComponent } from './products/products.component';
 
 export const routes: Routes = [
     {
@@ -48,5 +50,19 @@ export const routes: Routes = [
         data: {
             title: "Tourist"
         }
-    }
+    },
+    {
+        path: 'productsingle/:id',
+        component: ProductSingleComponent,
+        data: {
+            title: "Tourist"
+        }
+    },
+    {
+        path: 'products',
+        component: ProductsComponent,
+        data: {
+            title: "Tourist"
+        }
+    },
 ];

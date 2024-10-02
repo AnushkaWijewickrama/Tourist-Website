@@ -5,11 +5,12 @@ import { HttpResponse } from '@angular/common/http';
 import { TopbarComponent } from "../topbar/topbar.component";
 import { HeaderComponent } from "../header/header.component";
 import { NavbarComponent } from "../pages/navbar/navbar.component";
+import { FooterComponent } from "../footer/footer.component";
 
 @Component({
   selector: 'app-gallery',
   standalone: true,
-  imports: [CommonModule, TopbarComponent, HeaderComponent, NavbarComponent],
+  imports: [CommonModule, TopbarComponent, HeaderComponent, NavbarComponent, FooterComponent],
   templateUrl: './gallery.component.html',
   styleUrl: './gallery.component.scss'
 })

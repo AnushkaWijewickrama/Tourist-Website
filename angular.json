@@ -36,6 +36,8 @@
               "public/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css",
               "public/lib/animate/animate.min.css",
               "public/css/bootstrap.min.css",
+              "node_modules/primeng/resources/themes/lara-light-blue/theme.css",
+              "node_modules/primeng/resources/primeng.min.css",
               "public/css/style.css"
             ],
             "scripts": [
@@ -110,7 +112,9 @@
               "public/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css",
               "public/lib/animate/animate.min.css",
               "public/css/bootstrap.min.css",
-              "public/css/style.css"
+              "public/css/style.css",
+              "node_modules/primeng/resources/themes/lara-light-blue/theme.css",
+              "node_modules/primeng/resources/primeng.min.css"
             ],
             "scripts": [
               "node_modules/jquery/dist/jquery.min.js",

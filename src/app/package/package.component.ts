@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { packageService } from '../shared/services/package.service';
 import { HttpResponse } from '@angular/common/http';
+import { CurrencyPipe } from '@angular/common';
 
 @Component({
   selector: 'app-package',
   standalone: true,
-  imports: [],
+  imports: [CurrencyPipe],
   templateUrl: './package.component.html',
   styleUrl: './package.component.scss'
 })
