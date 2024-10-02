@@ -9,11 +9,12 @@ import { TopbarComponent } from "../topbar/topbar.component";
 import { HeaderComponent } from "../header/header.component";
 import { NavbarComponent } from "../pages/navbar/navbar.component";
 import { FooterComponent } from "../footer/footer.component";
+import { CurrencyPipe } from '@angular/common';
 
 @Component({
   selector: 'app-products',
   standalone: true,
-  imports: [CarouselModule, ButtonModule, TagModule, TopbarComponent, HeaderComponent, NavbarComponent, FooterComponent],
+  imports: [CarouselModule, ButtonModule, TagModule, TopbarComponent, HeaderComponent, NavbarComponent, FooterComponent, CurrencyPipe],
   templateUrl: './products-single.component.html',
   styleUrl: './products-single.component.scss'
 })
@@ -46,6 +47,7 @@ export class ProductSingleComponent implements OnInit {
     this.router.params.subscribe((id => {
       this.productSingleService.getSingleData(id['id']).subscribe((res: HttpResponse<any>) => {
         this.productSingleList = res.body
+        console.log(res.body)
       })
     }))
 

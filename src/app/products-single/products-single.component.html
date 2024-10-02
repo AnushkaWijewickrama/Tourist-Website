@@ -12,9 +12,6 @@
                             <img [src]="productSingle" [alt]="productSingle" width="100%" height="auto" />
                         </div>
                     </div>
-                    <div class="mb-3 font-medium">
-                        {{ productSingleList.title }}
-                    </div>
                 </div>
             </ng-template>
         </p-carousel>
@@ -22,10 +19,9 @@
 
         <div class="product-details">
             <h1>{{productSingleList?.title}}</h1>
-            <p class="price">$1200 per person</p>
+            <p class="price">{{productSingleList?.price | currency:'LKR':'symbol'}}</p>
             <p class="description">{{productSingleList?.description}}</p>
             <p [innerHTML]="productSingleList?.longDescription"></p>
-            <!-- <a href="#" class="btn">Book Now</a> -->
         </div>
     </div>
 </section>
