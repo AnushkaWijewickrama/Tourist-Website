@@ -43,13 +43,9 @@ export class ProductSingleComponent implements OnInit {
   }
 
   getProductDetails(): void {
-    console.log('kushan')
     this.router.params.subscribe((id => {
       this.productSingleService.getSingleData(id['id']).subscribe((res: HttpResponse<any>) => {
-        console.log(res.body)
         this.productSingleList = res.body
-        console.log(this.productSingleList)
-
       })
     }))
 

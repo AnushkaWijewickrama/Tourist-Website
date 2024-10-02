@@ -6,7 +6,7 @@
         @for (product of productList; track product._id) {
 
         <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
-            <a [routerLink]="['/productsingle',product?._id]">
+            <a [routerLink]="['/productsingle',product?.productDetails]">
                 <div class="service-item rounded pt-3">
                     <div class="p-4">
                         <img [src]="product?.imagePath" width="100%" height="auto">
