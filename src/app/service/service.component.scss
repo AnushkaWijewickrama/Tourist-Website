@@ -1,0 +1,52 @@
+.h1color {
+  color: #000 !important;
+}
+
+.parallax-section {
+  background-image: url("../../../public/img/2.jpeg");
+  min-height: 500px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+}
+img {
+  opacity: 0.5;
+}
+
+.container-xxl {
+  z-index: 1;
+  position: relative;
+}
+
+.parallax-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  //   background: rgba(0, 0, 0, 0.4);
+  z-index: 0;
+}
+
+.wow {
+  visibility: hidden;
+}
+
+.fadeInUp {
+  animation: fadeInUp 1s ease-in-out forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 40px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
