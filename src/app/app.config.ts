@@ -1,5 +1,5 @@
 import { ApplicationConfig, provideZoneChangeDetection } from '@angular/core';
-import { provideRouter, withInMemoryScrolling } from '@angular/router';
+import { provideRouter, RouterModule, withHashLocation, withInMemoryScrolling } from '@angular/router';
 
 import { routes } from './app.routes';
 import { provideClientHydration } from '@angular/platform-browser';
@@ -9,13 +9,15 @@ import { provideAnimations } from '@angular/platform-browser/animations';
 
 
 export const appConfig: ApplicationConfig = {
-  providers: [provideRouter(routes), provideAnimations(), provideHttpClient(withFetch()),
+  providers: [provideRouter(routes, withHashLocation()), provideAnimations(), provideHttpClient(withFetch()),
+
   provideRouter(
     routes,
     withInMemoryScrolling({
       scrollPositionRestoration: "top",
     })
   ),
+
     ScrollToTopService],
 
 };
