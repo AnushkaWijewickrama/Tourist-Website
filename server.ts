@@ -4,6 +4,7 @@ import express from 'express';
 import { fileURLToPath } from 'node:url';
 import { dirname, join, resolve } from 'node:path';
 import bootstrap from './src/main.server';
+import { router as apiRouter } from './src/api';
 
 // The Express app is exported so that it can be used by serverless Functions.
 export function app(): express.Express {
@@ -24,6 +25,7 @@ export function app(): express.Express {
     maxAge: '1y',
     index: 'index.html',
   }));
+  server.use('/api', apiRouter);
 
   // All regular routes use the Angular engine
   server.get('**', (req, res, next) => {
@@ -43,6 +45,7 @@ export function app(): express.Express {
 
   return server;
 }
+
 
 function run(): void {
   const port = process.env['PORT'] || 4000;

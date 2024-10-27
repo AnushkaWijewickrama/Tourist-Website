@@ -1,0 +1,33 @@
+<app-topbar></app-topbar>
+<app-header [selectedOptions]="'reviews'"></app-header>
+<app-navbar [title]="'Reviews'"></app-navbar>
+<a class="btn btn-lg btn-primary back-to-top" (click)="openLgMessageBox()">Write About Us</a>
+<h1 class="mb-5 text-center">Our Clients Say!!!</h1>
+<div class="container">
+    <div class="row">
+        @for (item of dataList; track item._id) {
+        <div class="col-lg-4">
+            <div class="testimonial-card">
+                <p class="testimonial-text">
+                    {{item?.message}}
+                </p>
+                <div class="profile">
+                    <img [src]="item?.imagePath" alt="Profile Image" class="profile-image" />
+                    <div class="profile-details">
+                        <h4 class="profile-name">{{item?.name}}</h4>
+                        <p class="profile-role">{{item?.email}}</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        } @empty {
+        <li>There are no items.</li>
+        }
+
+    </div>
+</div>
+
+
+
+<app-footer></app-footer>

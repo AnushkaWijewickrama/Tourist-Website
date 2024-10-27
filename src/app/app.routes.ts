@@ -7,6 +7,7 @@ import { ContactUsComponent } from './pages/contact-us/contact-us.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { ProductSingleComponent } from './products-single/products-single.component';
 import { ProductsComponent } from './products/products.component';
+import { ReviewComponent } from './review/review.component';
 
 export const routes: Routes = [
     {
@@ -61,6 +62,13 @@ export const routes: Routes = [
     {
         path: 'products',
         component: ProductsComponent,
+        data: {
+            title: "Tourist"
+        }
+    },
+    {
+        path: 'reviews',
+        component: ReviewComponent,
         data: {
             title: "Tourist"
         }
