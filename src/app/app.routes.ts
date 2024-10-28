@@ -59,13 +59,13 @@ export const routes: Routes = [
             title: "Tourist"
         }
     },
-    {
-        path: 'products',
-        component: ProductsComponent,
-        data: {
-            title: "Tourist"
-        }
-    },
+    // {
+    //     path: 'products',
+    //     component: ProductsComponent,
+    //     data: {
+    //         title: "Tourist"
+    //     }
+    // },
     {
         path: 'reviews',
         component: ReviewComponent,

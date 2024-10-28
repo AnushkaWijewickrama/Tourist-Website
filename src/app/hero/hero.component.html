@@ -1,12 +1,24 @@
-<div class="container-fluid bg-primary py-5 mb-5 hero-header">
-    <div class="container py-5">
-        <div class="row justify-content-center py-5">
-            <div class="col-lg-10 pt-lg-5 mt-lg-5 text-center">
-                <h1 class="display-3 text-white mb-3 animated slideInDown">Refresh Your Life From Unforgettable
-                    Experiences</h1>
-                <p class="fs-4 text-white mb-4 animated slideInDown">Tempor erat elitr rebum at clita diam amet diam
-                    et eos erat ipsum lorem sit</p>
+<ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig">
+    @for (item of bannerList; track item.title){
+    <div ngxSlickItem class="slide">
+        <div class="owl-carousel header-carousel position-relative">
+            <div class="owl-carousel-item position-relative">
+                <img class="img-fluid" [src]="item.imagePath" alt="">
+                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center"
+                    style="background: rgba(6, 3, 21, .5);">
+                    <div class="container">
+                        <div class="row justify-content-start">
+                            <div class="col-12 col-lg-12">
+                                <h2 class="text-white text-uppercase mb-3 animated slideInDown">{{item?.title}}</h2>
+                                <h1 class="display-4 text-white animated slideInDown mb-4">{{item.description}}<span
+                                        class="text-primary"></span></h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-</div>
+
+    }
+</ngx-slick-carousel>
