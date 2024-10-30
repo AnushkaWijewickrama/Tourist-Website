@@ -1,0 +1,27 @@
+<app-topbar></app-topbar>
+<app-header></app-header>
+<app-navbar [title]="'Package Details'"></app-navbar>
+<section id="product" class="product-section">
+    <div class="container">
+        <p-carousel [responsiveOptions]="responsiveOptions" [value]="packageDetailsList?.imagePath" [numVisible]="1"
+            [numScroll]="1" orientation="vertical" verticalViewPortHeight="360px">
+            <ng-template let-packageDetails pTemplate="item">
+                <div class="border-1 surface-border border-round m-2 p-3">
+                    <div class="mb-3">
+                        <div class="relative mx-auto">
+                            <img [src]="packageDetails" [alt]="packageDetails" width="300px" height="300px" />
+                        </div>
+                    </div>
+                </div>
+            </ng-template>
+        </p-carousel>
+
+
+        <div class="product-details">
+            <h1>{{packageDetailsList?.title}}</h1>
+            <p class="description">{{packageDetailsList?.description}}</p>
+            <p [innerHTML]="packageDetailsList?.longDescription"></p>
+        </div>
+    </div>
+</section>
+<app-footer></app-footer>

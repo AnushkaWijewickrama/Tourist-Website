@@ -8,6 +8,7 @@ import { GalleryComponent } from './gallery/gallery.component';
 import { ProductSingleComponent } from './products-single/products-single.component';
 import { ProductsComponent } from './products/products.component';
 import { ReviewComponent } from './review/review.component';
+import { PackageDetailsComponent } from './package-details/package-details.component';
 
 export const routes: Routes = [
     {
@@ -55,6 +56,13 @@ export const routes: Routes = [
     {
         path: 'productsingle/:id',
         component: ProductSingleComponent,
+        data: {
+            title: "Tourist"
+        }
+    },
+    {
+        path: 'packagedetails/:id',
+        component: PackageDetailsComponent,
         data: {
             title: "Tourist"
         }
